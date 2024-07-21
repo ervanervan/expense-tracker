@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import ExpenseForm from "../components/ExpenseForm";
 import ExpenseList from "../components/ExpenseList";
-import { useNavigate } from "react-router-dom";
 
 const Expenses = () => {
   const [expenses, setExpenses] = useState([]);
