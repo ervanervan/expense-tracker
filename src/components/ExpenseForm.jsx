@@ -16,10 +16,7 @@ const ExpenseForm = ({ onAddExpense }) => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="bg-red-500 p-6 rounded-lg shadow-md"
-    >
+    <form onSubmit={handleSubmit} className="p-3">
       <h2 className="text-2xl font-semibold mb-4">Add New Expense</h2>
       <div className="mb-4">
         <label
