@@ -24,7 +24,7 @@ const Expenses = () => {
 
   // Simpan data pengeluaran ke localStorage setiap kali ada perubahan
   useEffect(() => {
-    console.log("Saving expenses:", expenses); // Debugging
+    // console.log("Saving expenses:", expenses); // Debugging
     // localStorage.setItem("expenses", JSON.stringify(expenses));
   }, [expenses]);
 
