@@ -18,7 +18,7 @@ const Expenses = () => {
     }
 
     const savedExpenses = JSON.parse(localStorage.getItem("expenses")) || [];
-    console.log("Loaded expenses:", savedExpenses); // Debugging
+    // console.log("Loaded expenses:", savedExpenses); // Debugging
     setExpenses(savedExpenses);
   }, [navigate, userName]);
 
