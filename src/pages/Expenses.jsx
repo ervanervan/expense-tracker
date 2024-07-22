@@ -111,6 +111,9 @@ const Expenses = () => {
         </button>
 
         {/* {showForm && <ExpenseForm onAddExpense={addExpense} />} */}
+        <Modal isOpen={showForm} onClose={() => setShowForm(false)}>
+          <ExpenseForm onAddExpense={addExpense} />
+        </Modal>
       </div>
     </div>
   );
