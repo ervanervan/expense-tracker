@@ -107,7 +107,7 @@ const Expenses = () => {
           onClick={() => setShowForm(!showForm)}
           className="fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-200 ease-in-out"
         >
-          +
+          + Add Expense
         </button>
 
         {showForm && <ExpenseForm onAddExpense={addExpense} />}
