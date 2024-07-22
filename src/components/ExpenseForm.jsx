@@ -31,7 +31,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="Rent, Food, etc."
+          placeholder="Food, Drink, etc."
         />
       </div>
       <div className="mb-4">
@@ -47,7 +47,7 @@ const ExpenseForm = ({ onAddExpense }) => {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
           className="w-full px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="100000"
+          placeholder="10000"
         />
       </div>
       <div className="mb-6">
