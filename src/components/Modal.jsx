@@ -14,7 +14,7 @@ const Modal = ({ children, isOpen, onClose }) => {
             &#x2715; {/* X icon for close */}
           </button>
         </div>
-        <div className="p-4">{children}</div>
+        <div className="px-4 pb-4">{children}</div>
       </div>
     </div>
   );
