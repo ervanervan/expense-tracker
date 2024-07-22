@@ -110,7 +110,7 @@ const Expenses = () => {
           + Add Expense
         </button>
 
-        {showForm && <ExpenseForm onAddExpense={addExpense} />}
+        {/* {showForm && <ExpenseForm onAddExpense={addExpense} />} */}
       </div>
     </div>
   );
