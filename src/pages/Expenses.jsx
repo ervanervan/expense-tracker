@@ -82,7 +82,7 @@ const Expenses = () => {
           </h1>
         </div>
 
-        <div className="mb-8 p-6 bg-blue-500 text-white rounded-lg">
+        <div className="mb-8 p-6 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold mb-2">Total Expenses</h2>
           <p className="text-xl md:text-2xl font-bold">
             {formatRupiah(totalExpenses)}
