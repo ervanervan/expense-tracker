@@ -106,7 +106,7 @@ const Expenses = () => {
 
         <button
           onClick={() => setShowForm(!showForm)}
-          className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-200 ease-in-out"
+          className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-200 ease-in-out"
         >
           + Add Expense
         </button>
