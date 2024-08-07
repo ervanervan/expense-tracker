@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const ExpenseForm = ({ onAddExpense, onUpdateExpense, currentExpense }) => {
   const [name, setName] = useState("");
