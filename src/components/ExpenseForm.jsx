@@ -1,14 +1,31 @@
 import React, { useState } from "react";
 
-const ExpenseForm = ({ onAddExpense }) => {
+const ExpenseForm = ({ onAddExpense, onUpdateExpense, currentExpense }) => {
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
 
+  useEffect(() => {
+    if (currentExpense) {
+      setName(currentExpense.name);
+      setAmount(currentExpense.amount);
+      setDate(currentExpense.date);
+    } else {
+      setName("");
+      setAmount("");
+      setDate("");
+    }
+  }, [currentExpense]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name && amount && date) {
-      onAddExpense({ name, amount: parseFloat(amount), date });
+      const expense = { name, amount: parseFloat(amount), date };
+      if (currentExpense) {
+        onUpdateExpense(expense);
+      } else {
+        onAddExpense(expense);
+      }
       setName("");
       setAmount("");
       setDate("");
