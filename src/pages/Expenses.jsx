@@ -46,6 +46,20 @@ const Expenses = () => {
     );
   };
 
+  const updateExpense = (updatedExpense) => {
+    const updatedExpenses = expenses.map((expense) =>
+      expense.date === currentExpense.date ? updatedExpense : expense
+    );
+    setExpenses(updatedExpenses);
+    setShowForm(false);
+    setCurrentExpense(null);
+  };
+
+  const editExpense = (expense) => {
+    setCurrentExpense(expense);
+    setShowForm(true);
+  };
+
   const formatRupiah = (amount) => {
     return new Intl.NumberFormat("id-ID", {
       style: "currency",
