@@ -87,7 +87,7 @@ const ExpenseForm = ({ onAddExpense, onUpdateExpense, currentExpense }) => {
           type="submit"
           className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-lg transition duration-200 ease-in-out hover:from-blue-600 hover:via-purple-600 hover:to-pink-600"
         >
-          Add Expense
+          {currentExpense ? "Update Expense" : "Add Expense"}
         </button>
       </div>
     </form>
