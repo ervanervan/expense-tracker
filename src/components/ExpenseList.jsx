@@ -1,12 +1,17 @@
 import React from "react";
 
-const ExpenseList = ({ expenses, onDeleteExpense, formatRupiah }) => {
+const ExpenseList = ({
+  expenses,
+  onDeleteExpense,
+  onEditExpense,
+  formatRupiah,
+}) => {
   return (
     <ul className="list-none flex flex-col gap-y-3">
       {expenses.map((expense, index) => (
         <li
           key={index}
-          className="flex justify-between items-center bg-white p-4 rounded-lg border border-gray-200"
+          className="flex justify-between items-center bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50 p-4 rounded-lg border border-gray-200"
         >
           <div className="flex-1">
             <p className="text-xs text-gray-500 mb-1">
@@ -19,12 +24,20 @@ const ExpenseList = ({ expenses, onDeleteExpense, formatRupiah }) => {
               </span>
             </p>
           </div>
-          <button
-            onClick={() => onDeleteExpense(index)}
-            className="bg-red-500 hover:bg-red-600 text-white text-sm font-medium py-1.5 px-3 rounded-lg transition duration-200 ease-in-out"
-          >
-            Delete
-          </button>
+          <div className="flex gap-x-2">
+            <button
+              onClick={() => onEditExpense(expense)}
+              className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:from-green-500 hover:via-green-600 hover:to-green-700 text-white text-sm font-medium py-1.5 px-3 rounded-lg transition duration-200 ease-in-out"
+            >
+              Edit
+            </button>
+            <button
+              onClick={() => onDeleteExpense(index)}
+              className="bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:from-red-500 hover:via-red-600 hover:to-red-700 text-white text-sm font-medium py-1.5 px-3 rounded-lg transition duration-200 ease-in-out"
+            >
+              Delete
+            </button>
+          </div>
         </li>
       ))}
     </ul>
