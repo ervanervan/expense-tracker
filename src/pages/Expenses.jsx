@@ -7,6 +7,7 @@ import Modal from "../components/Modal";
 const Expenses = () => {
   const [expenses, setExpenses] = useState([]);
   const [showForm, setShowForm] = useState(false);
+  const [currentExpense, setCurrentExpense] = useState(null);
   const navigate = useNavigate();
   const userName = localStorage.getItem("userName"); // Ambil username dari localStorage
 
