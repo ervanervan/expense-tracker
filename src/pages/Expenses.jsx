@@ -112,6 +112,7 @@ const Expenses = () => {
               <ExpenseList
                 expenses={expenses}
                 onDeleteExpense={deleteExpense}
+                onEditExpense={editExpense}
                 formatRupiah={formatRupiah}
               />
             </div>
@@ -119,7 +120,10 @@ const Expenses = () => {
         </div>
 
         <button
-          onClick={() => setShowForm(!showForm)}
+          onClick={() => {
+            setCurrentExpense(null);
+            setShowForm(true);
+          }}
           className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-200 ease-in-out"
         >
           + Add Expense
@@ -127,7 +131,11 @@ const Expenses = () => {
 
         {/* {showForm && <ExpenseForm onAddExpense={addExpense} />} */}
         <Modal isOpen={showForm} onClose={() => setShowForm(false)}>
-          <ExpenseForm onAddExpense={addExpense} />
+          <ExpenseForm
+            onAddExpense={addExpense}
+            onUpdateExpense={updateExpense}
+            currentExpense={currentExpense}
+          />
         </Modal>
       </div>
     </div>
