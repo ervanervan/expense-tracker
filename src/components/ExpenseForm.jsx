@@ -68,7 +68,7 @@ const ExpenseForm = ({ onAddExpense }) => {
       <div className="flex justify-end">
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200 ease-in-out"
+          className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-200 ease-in-out"
         >
           Add Expense
         </button>
